@@ -17,3 +17,17 @@ int main(){
 	
 	return 0;
 }
+void shuffle(int &a,int &b,int &c,int &d){
+    int j,i = 0;
+    int x[] = {50,100,500,1000};
+    for(j = 0; j < 4;j++){
+        int T = x[j];
+        i = rand()%4;
+        x[j] = x[i];
+        x[i] = T;
+    }
+    a = x[0];
+    b = x[1];
+    c = x[2];
+    d = x[3];
+}
